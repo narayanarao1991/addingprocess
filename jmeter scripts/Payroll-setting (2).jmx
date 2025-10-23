@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Payroll setting" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Not)A;Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;138&quot;, &quot;Google Chrome&quot;;v=&quot;138&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">*/*</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="content-type" elementType="Header">
+            <stringProp name="Header.name">content-type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">qa.workshine.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <intProp name="HTTPSampler.concurrentPool">6</intProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <collectionProp name="DNSCacheManager.hosts"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="future year add" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/all" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/all</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="heads" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/cdn-cgi/rum?" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">cdn-cgi/rum?</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;resources&quot;:[],&quot;referrer&quot;:&quot;https://qa.workshine.com:8443/taxRules&quot;,&quot;eventType&quot;:1,&quot;firstPaint&quot;:444,&quot;firstContentfulPaint&quot;:3256,&quot;startTime&quot;:1751609500692.3,&quot;versions&quot;:{&quot;fl&quot;:&quot;2025.6.2&quot;,&quot;js&quot;:&quot;2024.6.1&quot;,&quot;timings&quot;:1},&quot;pageloadId&quot;:&quot;a8a27944-a880-472c-919a-08f27d8cf00d&quot;,&quot;location&quot;:&quot;https://qa.workshine.com:8443/taxRulesList&quot;,&quot;nt&quot;:&quot;navigate&quot;,&quot;serverTimings&quot;:[{&quot;name&quot;:&quot;cfCacheStatus&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;DYNAMIC&quot;},{&quot;name&quot;:&quot;cfOrigin&quot;,&quot;dur&quot;:20,&quot;desc&quot;:&quot;&quot;},{&quot;name&quot;:&quot;cfEdge&quot;,&quot;dur&quot;:25,&quot;desc&quot;:&quot;&quot;},{&quot;name&quot;:&quot;cfL4&quot;,&quot;dur&quot;:0,&quot;desc&quot;:&quot;?proto=TCP&amp;rtt=111534&amp;min_rtt=104946&amp;rtt_var=44061&amp;sent=6&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=1896&amp;recv_bytes=2897&amp;delivery_rate=13911&amp;cwnd=163&amp;unsent_bytes=0&amp;cid=ce65232674b9dab8&amp;ts=153&amp;x=0&quot;}],&quot;timingsV2&quot;:{&quot;nextHopProtocol&quot;:&quot;h2&quot;,&quot;decodedBodySize&quot;:24326},&quot;dt&quot;:&quot;cache&quot;,&quot;siteToken&quot;:&quot;843aa4e3fd6e430a9e73c8d0b2fba0e7&quot;,&quot;st&quot;:2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/one/2" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/one/2</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/update/2" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/update/2</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:2,&quot;yearFrom&quot;:2023,&quot;yearTo&quot;:2024,&quot;assessmentYear&quot;:&quot;2024-25&quot;,&quot;standardDeduction&quot;:&quot;75000&quot;,&quot;educationCess&quot;:&quot;4%&quot;,&quot;taxSlabs&quot;:[{&quot;id&quot;:8,&quot;fromAmount&quot;:0,&quot;toAmount&quot;:500000,&quot;percentage&quot;:0,&quot;taxRuleId&quot;:2},{&quot;id&quot;:9,&quot;fromAmount&quot;:500001,&quot;toAmount&quot;:1000000,&quot;percentage&quot;:5,&quot;taxRuleId&quot;:2},{&quot;id&quot;:10,&quot;fromAmount&quot;:1000001,&quot;toAmount&quot;:1500000,&quot;percentage&quot;:10,&quot;taxRuleId&quot;:2},{&quot;id&quot;:11,&quot;fromAmount&quot;:1500001,&quot;toAmount&quot;:2000000,&quot;percentage&quot;:15,&quot;taxRuleId&quot;:2},{&quot;id&quot;:12,&quot;fromAmount&quot;:2000001,&quot;toAmount&quot;:2500000,&quot;percentage&quot;:20,&quot;taxRuleId&quot;:2},{&quot;id&quot;:13,&quot;fromAmount&quot;:2500001,&quot;toAmount&quot;:3000000,&quot;percentage&quot;:25,&quot;taxRuleId&quot;:2},{&quot;id&quot;:14,&quot;fromAmount&quot;:3000001,&quot;toAmount&quot;:null,&quot;percentage&quot;:30,&quot;taxRuleId&quot;:2}],&quot;professionalTax&quot;:[{&quot;id&quot;:4,&quot;fromValue&quot;:0,&quot;toValue&quot;:500000,&quot;amount&quot;:0,&quot;taxRuleId&quot;:2},{&quot;id&quot;:5,&quot;fromValue&quot;:500001,&quot;toValue&quot;:1000000,&quot;amount&quot;:5,&quot;taxRuleId&quot;:2},{&quot;id&quot;:6,&quot;fromValue&quot;:1000001,&quot;toValue&quot;:1500000,&quot;amount&quot;:10,&quot;taxRuleId&quot;:2},{&quot;id&quot;:7,&quot;fromValue&quot;:1500001,&quot;toValue&quot;:2000000,&quot;amount&quot;:15,&quot;taxRuleId&quot;:2},{&quot;id&quot;:8,&quot;fromValue&quot;:2000001,&quot;toValue&quot;:2500000,&quot;amount&quot;:20,&quot;taxRuleId&quot;:2},{&quot;id&quot;:9,&quot;fromValue&quot;:2500001,&quot;toValue&quot;:0,&quot;amount&quot;:25,&quot;taxRuleId&quot;:2},{&quot;id&quot;:10,&quot;fromValue&quot;:3000001,&quot;toValue&quot;:0,&quot;amount&quot;:30,&quot;taxRuleId&quot;:2}],&quot;providentFunds&quot;:{&quot;id&quot;:2,&quot;taxRuleId&quot;:2,&quot;inPercentage&quot;:12,&quot;employeeFixedValue&quot;:15000,&quot;employeerFixedValue&quot;:20000,&quot;minBasic&quot;:15001},&quot;esiRules&quot;:{&quot;id&quot;:2,&quot;taxRuleId&quot;:2,&quot;esiEligibility&quot;:15000,&quot;disabilityESI&quot;:8001,&quot;seniorCitizenESI&quot;:9000,&quot;esiValue&quot;:12},&quot;fromMonth&quot;:&quot;April&quot;,&quot;toMonth&quot;:&quot;March&quot;,&quot;financialYear&quot;:&quot;2023-2024&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/one/1" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/one/1</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/update/1" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/update/1</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:1,&quot;yearFrom&quot;:2025,&quot;yearTo&quot;:2026,&quot;assessmentYear&quot;:&quot;2026-27&quot;,&quot;standardDeduction&quot;:&quot;75000&quot;,&quot;educationCess&quot;:&quot;4%&quot;,&quot;taxSlabs&quot;:[{&quot;id&quot;:1,&quot;fromAmount&quot;:0,&quot;toAmount&quot;:300000,&quot;percentage&quot;:0,&quot;taxRuleId&quot;:1},{&quot;id&quot;:2,&quot;fromAmount&quot;:300001,&quot;toAmount&quot;:500000,&quot;percentage&quot;:5,&quot;taxRuleId&quot;:1},{&quot;id&quot;:3,&quot;fromAmount&quot;:500001,&quot;toAmount&quot;:1000000,&quot;percentage&quot;:10,&quot;taxRuleId&quot;:1},{&quot;id&quot;:4,&quot;fromAmount&quot;:1000001,&quot;toAmount&quot;:1500000,&quot;percentage&quot;:15,&quot;taxRuleId&quot;:1},{&quot;id&quot;:5,&quot;fromAmount&quot;:1500001,&quot;toAmount&quot;:2000000,&quot;percentage&quot;:20,&quot;taxRuleId&quot;:1},{&quot;id&quot;:6,&quot;fromAmount&quot;:2000001,&quot;toAmount&quot;:3000000,&quot;percentage&quot;:25,&quot;taxRuleId&quot;:1},{&quot;id&quot;:7,&quot;fromAmount&quot;:3000001,&quot;toAmount&quot;:null,&quot;percentage&quot;:30,&quot;taxRuleId&quot;:1}],&quot;professionalTax&quot;:[{&quot;id&quot;:1,&quot;fromValue&quot;:0,&quot;toValue&quot;:15000,&quot;amount&quot;:0,&quot;taxRuleId&quot;:1},{&quot;id&quot;:2,&quot;fromValue&quot;:15001,&quot;toValue&quot;:20000,&quot;amount&quot;:150,&quot;taxRuleId&quot;:1},{&quot;id&quot;:3,&quot;fromValue&quot;:20001,&quot;toValue&quot;:0,&quot;amount&quot;:200,&quot;taxRuleId&quot;:1}],&quot;providentFunds&quot;:{&quot;id&quot;:1,&quot;taxRuleId&quot;:1,&quot;inPercentage&quot;:12,&quot;employeeFixedValue&quot;:1800,&quot;employeerFixedValue&quot;:1950,&quot;minBasic&quot;:15000},&quot;esiRules&quot;:{&quot;id&quot;:1,&quot;taxRuleId&quot;:1,&quot;esiEligibility&quot;:15000,&quot;disabilityESI&quot;:9000,&quot;seniorCitizenESI&quot;:8000,&quot;esiValue&quot;:12},&quot;fromMonth&quot;:&quot;April&quot;,&quot;toMonth&quot;:&quot;March&quot;,&quot;financialYear&quot;:&quot;2025-2026&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/save" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/save</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:null,&quot;yearFrom&quot;:&quot;2026&quot;,&quot;yearTo&quot;:&quot;2027&quot;,&quot;assessmentYear&quot;:&quot;2027-28&quot;,&quot;standardDeduction&quot;:&quot;1000&quot;,&quot;educationCess&quot;:&quot;10%&quot;,&quot;taxSlabs&quot;:[{&quot;fromAmount&quot;:0,&quot;toAmount&quot;:&quot;100000&quot;,&quot;percentage&quot;:&quot;10&quot;,&quot;taxRuleId&quot;:&quot;&quot;},{&quot;fromAmount&quot;:100001,&quot;toAmount&quot;:&quot;&quot;,&quot;percentage&quot;:&quot;5&quot;,&quot;taxRuleId&quot;:&quot;&quot;}],&quot;professionalTax&quot;:[{&quot;fromValue&quot;:0,&quot;toValue&quot;:&quot;100000&quot;,&quot;amount&quot;:&quot;5&quot;,&quot;taxRuleId&quot;:&quot;&quot;},{&quot;fromValue&quot;:100001,&quot;toValue&quot;:&quot;&quot;,&quot;amount&quot;:&quot;6&quot;,&quot;taxRuleId&quot;:&quot;&quot;}],&quot;providentFunds&quot;:{&quot;inPercentage&quot;:&quot;10&quot;,&quot;employeeFixedValue&quot;:&quot;1000&quot;,&quot;employeerFixedValue&quot;:&quot;1200&quot;,&quot;minBasic&quot;:&quot;1500&quot;},&quot;esiRules&quot;:{&quot;esiEligibility&quot;:&quot;1200&quot;,&quot;disabilityESI&quot;:&quot;1500&quot;,&quot;seniorCitizenESI&quot;:&quot;1700&quot;,&quot;esiValue&quot;:&quot;10&quot;},&quot;fromMonth&quot;:&quot;April&quot;,&quot;toMonth&quot;:&quot;March&quot;,&quot;financialYear&quot;:null}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/one/11" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/one/11</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/update/11" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/update/11</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:11,&quot;yearFrom&quot;:2026,&quot;yearTo&quot;:2027,&quot;assessmentYear&quot;:&quot;2027-28&quot;,&quot;standardDeduction&quot;:&quot;1000&quot;,&quot;educationCess&quot;:&quot;10%&quot;,&quot;taxSlabs&quot;:[{&quot;id&quot;:37,&quot;fromAmount&quot;:0,&quot;toAmount&quot;:100000,&quot;percentage&quot;:10,&quot;taxRuleId&quot;:11},{&quot;id&quot;:38,&quot;fromAmount&quot;:100001,&quot;toAmount&quot;:null,&quot;percentage&quot;:5,&quot;taxRuleId&quot;:11}],&quot;professionalTax&quot;:[{&quot;id&quot;:30,&quot;fromValue&quot;:0,&quot;toValue&quot;:100000,&quot;amount&quot;:5,&quot;taxRuleId&quot;:11},{&quot;id&quot;:31,&quot;fromValue&quot;:100001,&quot;toValue&quot;:0,&quot;amount&quot;:6,&quot;taxRuleId&quot;:11}],&quot;providentFunds&quot;:{&quot;id&quot;:11,&quot;taxRuleId&quot;:11,&quot;inPercentage&quot;:10,&quot;employeeFixedValue&quot;:1000,&quot;employeerFixedValue&quot;:1200,&quot;minBasic&quot;:1500},&quot;esiRules&quot;:{&quot;id&quot;:11,&quot;taxRuleId&quot;:11,&quot;esiEligibility&quot;:1200,&quot;disabilityESI&quot;:1500,&quot;seniorCitizenESI&quot;:1700,&quot;esiValue&quot;:10},&quot;fromMonth&quot;:&quot;April&quot;,&quot;toMonth&quot;:&quot;March&quot;,&quot;financialYear&quot;:&quot;2026-2027&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/taxrules/delete/11">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/taxrules/delete/11</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/all">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/all</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/save">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/save</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;name&quot;:&quot;hfghfghf&quot;,&quot;type&quot;:{&quot;label&quot;:&quot;Earning&quot;,&quot;value&quot;:1},&quot;basic&quot;:false,&quot;da&quot;:false,&quot;taxable&quot;:false,&quot;deductionType&quot;:null}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/one/55">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/one/55</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/update/55">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/update/55</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:55,&quot;name&quot;:&quot;hfghfghff&quot;,&quot;type&quot;:{&quot;value&quot;:1,&quot;label&quot;:&quot;Earning&quot;},&quot;category&quot;:&quot;Earning&quot;,&quot;deleted&quot;:false,&quot;deductionType&quot;:null,&quot;taxable&quot;:false,&quot;basic&quot;:false,&quot;da&quot;:false}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/all">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/all</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/one/55">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/one/55</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/delete/55">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/delete/55</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://qa.workshine.com:8443/api/heads/all">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">8443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/heads/all</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpdHN1cHBvcnRzQGluZnlzaGluZS5jb20iLCJlbXBsb3llZSI6MSwicGFzc3dvcmRMYXN0Q2hhbmdlZCI6MTc0MDYzNzQ2NjA3OCwidXJscyI6WzEsMiw1NCw1NSwxNjMsMzIyLDM1MiwzLDQsMTQwLDE0MSwxNDIsMTQzLDE1LDE2LDE0NywxNDgsMTUwLDI4LDI5LDE1NSwxNTYsMTU4LDM0LDM1LDE1OSwxNjAsMTYyLDczLDc0LDE2NCwxNjUsMTY3LDQyLDQzLDQ0LDE2OCwxNjksMTcxLDMxNCw2LDcsOCw5LDE3MiwxNzMsMTc2LDUsMTQ0LDE0NSwxNDYsMjk4LDI5OSwzMDAsMzA0LDMwNSwzMDEsMzAyLDMwMywzMDYsMzA3LDMyMywzMjQsMzI2LDMyNywzMjgsMzI5LDMzMCwzMzEsMzMyLDMzMywzMzUsMjAsMjEsMTUxLDE1MywxNTQsMTgsMTksODYsODcsODgsNzAsNzEsNzIsOTMsOTQsOTUsNTAsNTIsODksOTAsOTEsNDA1LDQwNiw0MDcsNDA4LDQwOSw0MTAsNDExLDQxMiwxNzcsMTc4LDE3OSwxOTUsMTk2LDIxNCwzODcsMzg4LDM4OSwzOTAsMzkxLDM5MiwyNTcsMjU4LDI1OSwyNjAsMjYxLDI0MiwyNDMsMzEwLDMxMSwzMTIsMjE2LDIxNywyMTgsMjE5LDI5NywyMzgsMjM5LDU3LDg0LDEwNiwxOTMsMjAzLDIwNCwyNTMsMjY4LDI3MiwyNzMsMjc1LDI5MSwzNzAsMzgyLDM4NiwzOTYsMzk3LDM5OCwzOTksNDIyXSwiaWF0IjoxNzUxNjA5NDY0LCJleHAiOjIwNjY3MDQ3Njd9.iOQRIXSPKYeQCxQRpHM5ar68Hc4QZGkUKwZ8FN2G6mc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
